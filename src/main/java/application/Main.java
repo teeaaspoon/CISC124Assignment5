@@ -1,3 +1,7 @@
+// Tommy Poon
+// CISC 124 Fall 2018
+// NET-ID 14tchp
+
 package application;
 
 import javafx.application.Application;

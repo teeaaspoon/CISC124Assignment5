@@ -1,6 +1,7 @@
+// Tommy Poon
+// CISC 124 Fall 2018
+// NET-ID 14tchp
 package application;
-
-import java.util.ArrayList;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -160,6 +161,9 @@ public class PizzaController {
 	void handleAddLineItem(ActionEvent event) {
 		try {
 			LineItem newItem = new LineItem(quantity, pizza);
+			// since line items will not be deleted or edited, this method is more efficient
+			// to calculate the total cost rather than making a function and looping through
+			// an array list to sum the cost
 			totalPizzasCost += newItem.getCost();
 			lineItemTextArea.appendText(newItem.toString());
 			lineItemTextArea.appendText("\n");
